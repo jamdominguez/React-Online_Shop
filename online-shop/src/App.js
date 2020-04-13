@@ -6,17 +6,30 @@ import Signup from './pages/Signup'
 import Shop from './pages/Shop'
 import TopMenu from './components/TopMenu';
 
-function App() {
-  return (
-    <div className="App">
-      <TopMenu />
-      <Switch>
-        <Route exact path='/'component={Signup} />
-        <Route exact path='/shop'component={Shop} />
-      </Switch>
+class App extends React.Component {
+  state = {
+    items: []
+  }
 
-    </div>
-  );
+  addToBasket = () => {
+    console.log('a la saca')
+    const items = this.state.items
+    items.push('algunacosa')
+    this.setState( {items} )
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <TopMenu items={this.state.items}/>
+        <Switch>
+          <Route exact path='/'component={Signup} />
+          <Route exact path='/shop'component={Shop}/>
+        </Switch>
+
+      </div>
+    );
+  }
 }
 
 export default App;

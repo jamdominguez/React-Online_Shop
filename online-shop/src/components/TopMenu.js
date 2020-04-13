@@ -1,26 +1,30 @@
 import React from 'react'
-import { AppBar, Tabs, Tab } from '@material-ui/core'
+import {  AppBar, Toolbar, Typography } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 
+import Basket from './Basket'
+
 class TopMenu extends React.Component {
-    state = {
-        value: 0,
+    handleChange = (event, value) => {        
+        this.setState({ value })
+        
     }
 
-    handleClick = (e) => {        
-        console.log(e.target)
-        //this.setState(e.taget.value)
-    }
-
-    render() {
-        console.log(this.state)
+    render() {                
         return (
+
             <AppBar position="static" color='default'>
-                <Tabs value={this.state.value} aria-label="simple tabs example">
-                    <Link className='topMenu-link' to={`/`} onClick={this.handleClick} value='0'  ><Tab label="Signup" /></Link>
-                    <Link className='topMenu-link' to={`/shop`} onClick={this.handleClick} value='1'><Tab label="Shop" /></Link>
-                </Tabs>
-            </AppBar >
+                <Toolbar className='topMenu'>                                
+                    <Link to='/' className='topMenu-link'> 
+                        <Typography variant="h6" color='secondary'> Signup </Typography>
+                    </Link>
+                    <Link to='/shop' className='topMenu-link'> 
+                        <Typography variant="h6" color='secondary'> Shop </Typography>
+                    </Link>
+                    <div className='topMenu-fill'/>
+                    <Basket color='default' className='basket-div'/>
+                </Toolbar>
+            </AppBar>            
         )
     }
 }

@@ -1,0 +1,42 @@
+[
+    {
+        "id": "0",
+        "src": "https://m.media-amazon.com/images/I/81jQIRw2wVL._AC_UY218_ML3_.jpg",
+        "title": "Una historia de España",
+        "description": "Un libro de Arturo",
+        "price":"9.49"
+
+    },
+    {
+        "id": "1",
+        "src": "https://m.media-amazon.com/images/I/61aPU9DBjJL._AC_UY218_ML3_.jpg",
+        "title": "Echo Dot, Altavoz inteligente con Alexa",
+        "description": "Sonar, suena",
+        "price":"53.99"
+
+    },
+    {
+        "id": "2",
+        "src": "https://images-eu.ssl-images-amazon.com/images/I/51LB7zH9wuL._AC_US218_.jpg",
+        "title": "Final Fantasy VII Remake",
+        "description": "Afloja la pasta que es episodico",
+        "price":"62.90"
+
+    },
+    {
+        "id": "3",
+        "src": "https://images-eu.ssl-images-amazon.com/images/I/41OBx2WJLFL._AC_US218_.jpg",
+        "title": "Rowenta VR7048F0",
+        "description": "Para ir hecho un pincel",
+        "price":"69.99"
+
+    },
+    {
+        "id": "4",
+        "src": "https://m.media-amazon.com/images/I/71Bp76xaWVL._AC_UL320_ML3_.jpg",
+        "title": "Rubies Batman Disfraz Classic",
+        "description": "Pontelo y sal a patear traseros de insurgentes que no cumplan la cuarentena",
+        "price":"35.57"
+
+    }        
+]

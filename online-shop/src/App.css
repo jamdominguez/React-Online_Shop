@@ -7,7 +7,21 @@
   pointer-events: none;
 }
 
-.topMenu-link{
-  text-decoration: none;
-  color:black;
+.topMenu-fill{
+  width: 60%;  
 }
+.topMenu-link{
+  text-decoration: none;  
+  margin-left: 30px;
+}
+
+.basket-icon{
+  margin-left: 15px;
+  cursor: pointer;
+}
+.basket-link{
+  text-decoration: none;  
+  cursor: pointer;
+  color: rgb(26, 25, 25);
+}
+
