@@ -8,23 +8,32 @@ import TopMenu from './components/TopMenu';
 
 class App extends React.Component {
   state = {
-    items: []
+    items: [],
+    logged: false
   }
 
-  addToBasket = () => {
-    console.log('a la saca')
+  addToBasket = (item) => {    
     const items = this.state.items
-    items.push('algunacosa')
+    items.push(item)
     this.setState( {items} )
   }
 
-  render() {
+  updateLogged = () => {    
+    const logged = true
+    this.setState({ logged })
+  }
+
+  render() {        
     return (
       <div className="App">
-        <TopMenu items={this.state.items}/>
+        <TopMenu items={this.state.items} logged={this.state.logged}/>
         <Switch>
-          <Route exact path='/'component={Signup} />
-          <Route exact path='/shop'component={Shop}/>
+          <Route exact path='/shop' render={() => { // pass props to the using routes
+            return (<Shop addToBasket={this.addToBasket} logged={this.state.logged} />)
+          }}/>
+          <Route exact path='/' render={() => { // pass props to the using routes
+            return (<Signup updateLogged={this.updateLogged} />)
+          }}/>
         </Switch>
 
       </div>

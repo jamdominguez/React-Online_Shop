@@ -4,9 +4,9 @@ import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import { Link } from 'react-router-dom'
 
 function Basket(props) {
-    const { items, isLogged } = props
+    const { items, logged } = props
 
-    if (isLogged) {
+    if (logged) {        
             return(
                 <div>
                 <Typography variant='inherit' color='secondary'>Logged</Typography>
@@ -24,5 +24,5 @@ export default Basket
 
 Basket.defaultProps = {
     items: [],
-    isLogged: false
+    logged: false
 }

@@ -13,12 +13,10 @@ class Shop extends React.Component {
         this.setState({ items })
     }
 
-
     render() {
-        console.log('render shop', this.props)
         return (
-            <List>                
-                    {this.state.items.map((item) => <ListItem key={item.id}> <ShopItem {...item} addToBasket={this.props.addToBasket}/> </ListItem>)}                
+            <List>
+                {this.state.items.map((item) => <ListItem key={item.id}> <ShopItem item={item} logged={this.props.logged} addToBasket={this.props.addToBasket} /> </ListItem>)}
             </List>
         )
     }

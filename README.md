@@ -1,5 +1,5 @@
 # React-Online_Shop
-Development of the online shop example with two projects. The first using React with "classic" state and the second using React with Hooks (version 16.8)
+Development of the online shop example with two projects. The first using React with "classic" state and the second using React with Hooks (version 16.8) and Context.
 
 
 # Online Shop without Hooks
@@ -13,3 +13,8 @@ Development of the online shop example with two projects. The first using React 
   `npm install --save-dev @material-ui/core`
 
   `npm install --save-dev @material-ui/icons`
+
+
+
+# Online Shop with Hooks and Context
+## Dependencies

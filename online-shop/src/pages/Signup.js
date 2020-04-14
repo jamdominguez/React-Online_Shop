@@ -32,13 +32,12 @@ class Signup extends React.Component {
         else this.setState({ buttonDisabled: true })
     }
 
-    handleSubmit = (e) => {
+    handleSubmit = (e) => {        
         e.preventDefault()
-        //updateLoggedSection()  
+        this.props.updateLogged()  
     }
 
-    render() {
-        console.log('render Signup', this.state)
+    render() {        
         return(
             <form onSubmit={this.handleSubmit}>
                 <div>
@@ -51,7 +50,7 @@ class Signup extends React.Component {
                     <Checkbox id='terms' color='secondary' onChange={this.onChangeTerms} required/> Accept use terms
                 </div>
                 <div>
-                    <Button variant='contained' color='secondary' disabled={this.state.buttonDisabled}>Signup!</Button>
+                    <Button type='submit' variant='contained' color='secondary' disabled={this.state.buttonDisabled}>Signup!</Button>
                 </div>
             </form>
         )

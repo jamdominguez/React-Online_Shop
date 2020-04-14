@@ -22,7 +22,7 @@ class TopMenu extends React.Component {
                         <Typography variant="h6" color='secondary'> Shop </Typography>
                     </Link>
                     <div className='topMenu-fill'/>
-                    <Basket color='default' className='basket-div'/>
+                    <Basket color='default' className='basket-div' items={this.props.items} logged={this.props.logged}/>
                 </Toolbar>
             </AppBar>            
         )
